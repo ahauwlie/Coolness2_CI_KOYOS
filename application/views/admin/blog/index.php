@@ -28,7 +28,7 @@
     <section class="content-header">
       <h1>
         Data Tables
-        <small>- Daftar Project</small>
+        <small>- Daftar blog</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -42,35 +42,37 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <a href="<?php echo site_url('Project_admin/addProject') ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah Project</a>
+          <a href="<?php echo site_url('blog_admin/addblog') ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah blog</a>
           <table id="productTable" class="table-bordered table-hover" style="table-layout: auto; width: 100%; ">
             <thead>
             <tr>
               <th>Id</th>
               <th>Judul</th>
               <th>Tanggal</th>
-              <th>Sub Judul 1</th>
-              <th>Sub Judul 2</th>
-              <th>Sub Judul 3</th>
-              <th>Foto</th>
+              <th>Story</th>
+              <th>Kategori</th>
+              <th>Quotes</th>
+              <th>Tag</th>
+              <th>Admin</th>
               <th>Aksi</th>
             </tr>
             </thead>
             <tbody>
             <?php
-              foreach ($project as $row) {
+              foreach ($blog as $row) {
                   echo "<tr>";
-                  echo "<td>".$row['id_pro']."</td>";
-                  echo "<td>".$row['judul_pro']."</td>";
-                  echo "<td>".$row['tanggal_pro']."</td>";
-                  echo "<td>".$row['point_21_pro']."</td>";
-                  echo "<td>".$row['point_31_pro']."</td>";
-                  echo "<td>".$row['point_41_pro']."</td>";
-                  echo "<td>".$row['img_1_pro']."</td>";
+                  echo "<td>".$row['id_blog']."</td>";
+                  echo "<td>".$row['judul_blog']."</td>";
+                  echo "<td>".$row['tanggal_blog']."</td>";
+                  echo "<td>".$row['story_blog']."</td>";
+                  echo "<td>".$row['kategori_blog']."</td>";
+                  echo "<td>".$row['quotes_blog']."</td>";
+                  echo "<td>".$row['tag_blog']."</td>";
+                  echo "<td>".$row['id_adm']."</td>";
                   echo "<td class='text-center'>";
-                  echo "      <a href='".site_url('Project_admin/edit/').$row['id_pro']."'><i class='fa fa-pencil'></i></a> ";
-                  echo "      <a href='".site_url('Project_admin/detail/').$row['id_pro']."'><i class='fa fa-eye'></i></a> ";
-                  echo "      <a href='#' data-id='".$row['id_pro']."' data-name='".$row['judul_pro']."' class='sweet-confirm'><i class='fa fa-trash'></i></a>";
+                  echo "      <a href='".site_url('blog_admin/edit/').$row['id_blog']."'><i class='fa fa-pencil'></i></a> ";
+                  echo "      <a href='".site_url('blog_admin/detail/').$row['id_blog']."'><i class='fa fa-eye'></i></a> ";
+                  echo "      <a href='#' data-id='".$row['id_blog']."' data-name='".$row['judul_blog']."' class='sweet-confirm'><i class='fa fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
               }
@@ -81,10 +83,11 @@
               <th>Id</th>
               <th>Judul</th>
               <th>Tanggal</th>
-              <th>Sub Judul 1</th>
-              <th>Sub Judul 2</th>
-              <th>Sub Judul 3</th>
-              <th>Foto</th>
+              <th>Story</th>
+              <th>Kategori</th>
+              <th>Quotes</th>
+              <th>Tag</th>
+              <th>Admin</th>
               <th>Aksi</th>
             </tr>
             </tfoot>
@@ -155,7 +158,7 @@
                     closeOnConfirm: true
                 },
                 function(){
-                    $('#delete-form').attr('action', '<?php echo site_url('Project_admin/delete/'); ?>' + id).submit();
+                    $('#delete-form').attr('action', '<?php echo site_url('blog_admin/delete/'); ?>' + id).submit();
                 });
         });
     })
