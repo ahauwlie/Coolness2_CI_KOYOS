@@ -45,7 +45,15 @@
                 </div>
                 <div class="form-group">
                     <label>Harga</label>
-                    <p class="form-control-static">Rp. <?php echo $barang['harga_bar']; ?></p>
+                    <p class="form-control-static">
+                      <?php 
+                      function rupiah($angka){                        
+                          $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+                          return $hasil_rupiah;                       
+                        }                       
+                        echo rupiah($barang['harga_bar']);
+                      ?>
+                    </p>
                 </div>
                 <div class="form-group">
                     <label>Size Barang</label>

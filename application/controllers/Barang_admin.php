@@ -107,7 +107,7 @@ class Barang_admin extends CI_Controller
 
                     $this->load->helper(array('form', 'url'));
 
-                    if($this->input->post('foto') == NULL || $this->input->post('foto2') == NULL || $this->input->post('foto3') == NULL || $this->input->post('foto4') == NULL || $this->input->post('foto5') == NULL || $this->input->post('foto6') == NULL || $this->input->post('foto7') == NULL || $this->input->post('foto8') == NULL || $this->input->post('foto9') == NULL || $this->input->post('foto10') == NULL){
+                    if($this->input->post('foto') == NULL){
                         $data = Array (
                             'nama_bar' => $this->input->post('nama'),
                             'deskripsi_bar' => $this->input->post('deskripsi'),

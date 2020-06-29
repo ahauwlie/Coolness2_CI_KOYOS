@@ -48,7 +48,13 @@
                 </div>
                 <div class="form-group">
                     <label>Harga</label>
-                    <input name="harga" id="harga" type="text" maxlength="100" class="form-control" value="<?php echo $barang['harga_bar']; ?>" required>
+                    <input name="harga" id="harga" type="text" maxlength="100" class="form-control" value="<?php 
+                      function rupiah($angka){                        
+                          $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+                          return $hasil_rupiah;                       
+                        }                       
+                        echo rupiah($barang['harga_bar']);
+                      ?>" required>
                 </div>
                 <div class="form-group">
                     <label>Size Barang</label>
