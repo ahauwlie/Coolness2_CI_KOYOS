@@ -83,11 +83,6 @@
 								</div>
 							</div>
 						</li>
-						<li>
-							<span>
-							<a class="phone_modal_button" href="#sign_in_modal"><span class="ico icon-male-user-shadow"></span></a>
-							</span>
-						</li>
 					</ul>
 				</div>
 			</div>
