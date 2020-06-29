@@ -124,7 +124,8 @@ class Barang_admin extends CI_Controller
                             'img_7_bar' => $pict7,
                             'img_8_bar' => $pict8,
                             'img_9_bar' => $pict9,
-                            'img_10_bar' => $pict10                      
+                            'img_10_bar' => $pict10,  
+                            'stock_bar' => $this->input->post('stock')                    
                         );
                     }
                     else{
@@ -144,7 +145,8 @@ class Barang_admin extends CI_Controller
                             'img_7_bar' => $this->input->post('foto7'),
                             'img_8_bar' => $this->input->post('foto8'),
                             'img_9_bar' => $this->input->post('foto9'),
-                            'img_10_bar' => $this->input->post('foto10')
+                            'img_10_bar' => $this->input->post('foto10'),
+                            'stock_bar' => $this->input->post('stock')
                         );
                     }                    
 
@@ -235,7 +237,8 @@ class Barang_admin extends CI_Controller
                         'img_7_bar' => $this->input->post('foto7'),
                         'img_8_bar' => $this->input->post('foto8'),
                         'img_9_bar' => $this->input->post('foto9'),
-                        'img_10_bar' => $this->input->post('foto10')   
+                        'img_10_bar' => $this->input->post('foto10'),
+                        'stock_bar' => $this->input->post('stock')   
                     );
 
                     $this->model_barang->update(html_escape($data), $id, false);

@@ -61,6 +61,10 @@
                     <label>Tag</label>
                     <input name="tag" id="tag" type="text" class="form-control" required>
                 </div>
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input name="stock" id="stock" type="number" maxlength="3" class="form-control" required>
+                </div>
                 <div class="form-group p-t-4">
                     <label>Foto Link</label>
                     <input name="foto" id="foto" type="text" maxlength="255" class="form-control">

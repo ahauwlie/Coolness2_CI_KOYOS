@@ -83,6 +83,7 @@
                 <th>Foto 8</th>
                 <th>Foto 9</th>
                 <th>Foto 10</th>
+                <th>Stock</th>
               </tr>";
               
               $numrow = 1;
@@ -104,9 +105,10 @@
                 $img_7_bar = $row['M'];
                 $img_8_bar = $row['N'];
                 $img_9_bar = $row['O'];
-                $img_10_bar = $row['O'];
+                $img_10_bar = $row['P'];
+                $stock_bar = $row['Q'];
                 
-                if(empty($nama_bar) && ! empty($harga_bar) && ! empty($deskripsi_bar) && ! empty($size_bar) && ! empty($tag_bar) &&  ! empty($kategori_bar) && ! empty($img_1_bar) && ! empty($img_2_bar) && ! empty($img_3_bar) && ! empty($img_4_bar) && ! empty($img_5_bar) && ! empty($img_6_bar) && ! empty($img_7_bar) && ! empty($img_8_bar) && ! empty($img_9_bar) && ! empty($img_10_bar))
+                if(empty($nama_bar) && ! empty($harga_bar) && ! empty($deskripsi_bar) && ! empty($size_bar) && ! empty($tag_bar) &&  ! empty($kategori_bar) && ! empty($img_1_bar) && ! empty($img_2_bar) && ! empty($img_3_bar) && ! empty($img_4_bar) && ! empty($img_5_bar) && ! empty($img_6_bar) && ! empty($img_7_bar) && ! empty($img_8_bar) && ! empty($img_9_bar) && ! empty($img_10_bar) && ! empty($stock_bar))
                   continue;
                 
                 if($numrow > 1){
@@ -126,6 +128,7 @@
                   $img_8_bar_td = ( ! empty($img_8_bar))? "" : " style='background: #E07171;'";
                   $img_9_bar_td = ( ! empty($img_9_bar))? "" : " style='background: #E07171;'";
                   $img_10_bar_td = ( ! empty($img_10_bar))? "" : " style='background: #E07171;'";
+                  $stock_bar_td = ( ! empty($stock_bar))? "" : " style='background: #E07171;'";
                   
                   if(empty($nama_bar) or empty($harga_bar) or empty($deskripsi_bar) or empty($size_bar) or empty($tag_bar) or  empty($kategori_bar) or empty($img_1_bar)){
                     $kosong++; 
@@ -148,6 +151,7 @@
                   echo "<td".$img_8_bar_td.">".$img_8_bar."</td>";
                   echo "<td".$img_9_bar_td.">".$img_9_bar."</td>";
                   echo "<td".$img_10_bar_td.">".$img_10_bar."</td>";
+                  echo "<td".$stock_bar_td.">".$stock_bar."</td>";
                   echo "</tr>";
                 }
                 

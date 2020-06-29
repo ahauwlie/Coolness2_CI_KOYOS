@@ -64,6 +64,10 @@
                     <p class="form-control-static"><?php echo $barang['tag_bar']; ?></p>
                 </div>
                 <div class="form-group">
+                    <label>Stock</label>
+                    <p class="form-control-static"><?php echo $barang['stock_bar']; ?></p>
+                </div>
+                <div class="form-group">
                     <label>Kategori</label>
                     <p class="form-control-static"><?php echo $barang['kategori_bar']; ?></p>
                 </div>

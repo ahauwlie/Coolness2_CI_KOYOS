@@ -91,7 +91,8 @@ class barang_import_admin extends CI_Controller {
           'img_7_bar'=>$row['M'],
           'img_8_bar'=>$row['N'],
           'img_9_bar'=>$row['O'],
-          'img_10_bar'=>$row['P']
+          'img_10_bar'=>$row['P'],
+          'stock_bar'=>$row['Q']
         ));
       }
       

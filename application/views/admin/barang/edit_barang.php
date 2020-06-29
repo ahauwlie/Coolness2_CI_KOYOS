@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label>Harga</label>
-                    <input name="harga" id="harga" type="text" maxlength="100" class="form-control" value="<?php 
+                    <input name="harga" id="harga" type="number" maxlength="9" class="form-control" value="<?php 
                       function rupiah($angka){                        
                           $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
                           return $hasil_rupiah;                       
@@ -67,6 +67,10 @@
                 <div class="form-group">
                     <label>Tag</label>
                     <input name="tag" id="tag" placeholder="boleh kosong" type="text" value="<?php echo $barang['tag_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input name="stock" id="stock" type="number" maxlength="3" value="<?php echo $barang['stock_bar']; ?>" class="form-control">
                 </div>
                 <div class="form-group p-t-4">
                     <label>Foto Link</label>
