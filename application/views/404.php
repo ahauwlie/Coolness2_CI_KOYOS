@@ -34,41 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</form>
 			</div>
 		</div>
-		<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="sign_in_modal">
-			<div class="container">
-				<div class="row c-gutter-0 align-items-center">
-					<div class="ls col-12 col-sm-6">
-						<form class="contact-form sign-in c-mb-10 c-gutter-10" method="post" action="http://webdesign-finder.com/">
-							<div class="row">
-								<div class="col-sm-12">
-									<h4><span class="color-main">Sign In</span> / Sign Up</h4>
-									<div class="divider-sm-0 divider-md-30"></div>
-									<div class="form-group has-placeholder">
-										<label for="signname">Full Name <span class="required">*</span></label>
-										<input type="text" aria-required="true" size="30" value="" name="name" id="signname" class="form-control" placeholder="Full Name">
-									</div>
-									<div class="form-group has-placeholder">
-										<label for="signpassword">Password<span class="required">*</span></label>
-										<input type="password" aria-required="true" size="30" value="" name="password" id="signpassword" class="form-control" placeholder="Password">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<button type="submit" id="contact_signinform_submit" name="contact_submit" class="btn btn-outline-darkgrey">Email Us</button>
-									</div>
-								</div>
-								<a class="sign_up_modal close-modal" data-dismiss="modal" aria-label="Close" href="#sign_up_modal"><span aria-hidden="true">Forgot Password?</span></a>
-							</div>
-						</form>
-					</div>
-					<div class="col-12 col-sm-6 d-none d-sm-block">
-						<img src="images/sing-in-modal.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
 		<svg style="display:none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<symbol id="icon-1" viewBox="0 0 226 32">
