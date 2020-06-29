@@ -1,9 +1,9 @@
 <?php 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Blog_import extends CI_Model {
+class Barang_import extends CI_Model {
   public function view(){
-    return $this->db->get('blog')->result(); // Tampilkan semua data yang ada di tabel product
+    return $this->db->get('barang')->result(); // Tampilkan semua data yang ada di tabel product
   }
   
   // Fungsi untuk melakukan proses upload file
@@ -30,6 +30,6 @@ class Blog_import extends CI_Model {
   
   // Buat sebuah fungsi untuk melakukan insert lebih dari 1 data
   public function insert_multiple($data){
-    $this->db->insert_batch('blog', $data);
+    $this->db->insert_batch('barang', $data);
   }
 }

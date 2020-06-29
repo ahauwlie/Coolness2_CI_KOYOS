@@ -28,7 +28,7 @@
     <section class="content-header">
       <h1>
         Data Tables
-        <small>- Daftar Blog</small>
+        <small>- Daftar Barang</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -42,14 +42,14 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <a href="<?php echo site_url("Blog_import_admin/form") ?>"class="btn btn-primary"><i class="fa fa-plus-circle"></i> Import Blog</a>
+          <a href="<?php echo site_url("Barang_import_admin/form") ?>"class="btn btn-primary"><i class="fa fa-plus-circle"></i> Import Barang</a>
           <table id="productTable" class="table-bordered table-hover" style="table-layout: auto; width: 100%; ">
             <thead>
             <tr>
               <th>Id</th>
-              <th>Judul</th>
-              <th>Tanggal</th>
-              <th>Deskripsi</th>            
+              <th>Nama</th>
+              <th>Deskripsi</th>
+              <th>Harga</th>            
             </tr>
             </thead>
             <tbody>
@@ -57,10 +57,10 @@
                 if( ! empty($import)){
                   foreach($import as $data){
                     echo "<tr>";
-                    echo "<td>".$data->id_blog."</td>";
-                    echo "<td>".$data->judul_blog."</td>";
-                    echo "<td>".$data->tanggal_blog."</td>";
-                    echo "<td>".$data->story_blog."</td>";
+                    echo "<td>".$data->id_bar."</td>";
+                    echo "<td>".$data->nama_bar."</td>";
+                    echo "<td>".$data->deskripsi_bar."</td>";
+                    echo "<td>".$data->harga_bar."</td>";
                     echo "</tr>";
                   }
                 }else{
@@ -71,9 +71,9 @@
             <tfoot>
             <tr>
               <th>Id</th>
-              <th>Judul</th>
-              <th>Tanggal</th>
+              <th>Nama</th>
               <th>Deskripsi</th>
+              <th>Harga</th> 
             </tr>
             </tfoot>
           </table>

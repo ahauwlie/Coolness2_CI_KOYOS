@@ -1,13 +1,13 @@
 <?php 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Blog_import_admin extends CI_Controller {
+class barang_import_admin extends CI_Controller {
   private $filename = "import_data"; // Kita tentukan nama filenya
   
   public function __construct(){
     parent::__construct();
     
-    $this->load->model('blog_import');
+    $this->load->model('barang_import');
   }
   
   public function index(){
@@ -19,12 +19,12 @@ class Blog_import_admin extends CI_Controller {
     }else{
       if($this->session->userdata('login')) {
         $session = $this->session->userdata('login');
-        $data['import'] = $this->blog_import->view();
+        $data['import'] = $this->barang_import->view();
         $data['css'] = $this->load->view('include/style1.php', NULL, TRUE);
         $data['js'] = $this->load->view('include/script1.php', NULL, TRUE);
         $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
         $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
-        $this->load->view('admin/blog/view_import_barang', $data);
+        $this->load->view('admin/barang/view_import_barang', $data);
       }
     }
   }
@@ -41,7 +41,7 @@ class Blog_import_admin extends CI_Controller {
         $session = $this->session->userdata('login');
         $data = array();
         if(isset($_POST['preview'])){ 
-          $upload = $this->blog_import->upload_file($this->filename);
+          $upload = $this->barang_import->upload_file($this->filename);
           
           if($upload['result'] == "success"){ 
             include APPPATH.'third_party/PHPExcel/PHPExcel.php';
@@ -54,12 +54,12 @@ class Blog_import_admin extends CI_Controller {
             $data['upload_error'] = $upload['error']; 
           }
         }
-        $data['import'] = $this->blog_import->view();
+        $data['import'] = $this->barang_import->view();
         $data['css'] = $this->load->view('include/style1.php', NULL, TRUE);
         $data['js'] = $this->load->view('include/script1.php', NULL, TRUE);
         $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
         $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
-        $this->load->view('admin/blog/form_import_barang', $data);
+        $this->load->view('admin/barang/form_import_barang', $data);
       }
     }
   }
@@ -76,28 +76,29 @@ class Blog_import_admin extends CI_Controller {
     foreach($sheet as $row){
       if($numrow > 1){
         array_push($data, array(
-          'judul_blog'=>$row['A'], 
-          'judul_2_blog'=>$row['B'], 
-          'judul_3_blog'=>$row['C'], 
-          'tanggal_blog'=>$row['D'],
-          'kategori_blog'=>$row['E'],
-          'id_adm'=>$row['F'],
-          'tag_blog'=>$row['G'],
-          'quotes_blog'=>$row['H'],
-          'story_blog'=>$row['I'],
-          'story2_blog'=>$row['J'],
-          'img_1_blog'=>$row['K'],
-          'img_2_blog'=>$row['L'],
-          'img_3_blog'=>$row['M'],
-          'img_4_blog'=>$row['N'],
-          'img_5_blog'=>$row['O']
+          'nama_bar'=>$row['A'], 
+          'harga_bar'=>$row['B'], 
+          'deskripsi_bar'=>$row['C'], 
+          'size_bar'=>$row['D'],
+          'tag_bar'=>$row['E'],
+          'kategori_bar'=>$row['F'],
+          'img_1_bar'=>$row['G'],
+          'img_2_bar'=>$row['H'],
+          'img_3_bar'=>$row['I'],
+          'img_4_bar'=>$row['J'],
+          'img_5_bar'=>$row['K'],
+          'img_6_bar'=>$row['L'],
+          'img_7_bar'=>$row['M'],
+          'img_8_bar'=>$row['N'],
+          'img_9_bar'=>$row['O'],
+          'img_10_bar'=>$row['P']
         ));
       }
       
       $numrow++; 
     }
-    $this->blog_import->insert_multiple($data);
+    $this->barang_import->insert_multiple($data);
     
-    redirect("blog_import_admin"); 
+    redirect("barang_import_admin"); 
   }
 }
