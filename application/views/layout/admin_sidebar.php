@@ -1,8 +1,8 @@
 <header class="main-header">
   <!-- Logo -->
   <a href="<?php echo site_url('Home_admin'); ?>" class="logo">
-    <span class="logo-mini"><b>A</b>PW</span>
-    <span class="logo-lg"><b>Aura</b> Admin</span>
+    <span class="logo-mini"><b>C</b>SS</span>
+    <span class="logo-lg"><b>Coolness</b> Admin</span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
