@@ -48,74 +48,40 @@ class Blog_admin extends CI_Controller
                 $session = $this->session->userdata('login');
                 if ($_SERVER['REQUEST_METHOD'] == "POST")
                 {
-                    $config['upload_path']   = './inti/img/upload/'; 
+                    $config['upload_path']   = './inti/images/upload/'; 
                     $config['allowed_types'] = 'gif|jpg|png|jpeg'; 
                     $config['max_size']      = 10240;
-                    $location = base_url().'inti/img/upload/';
+                    $location = base_url().'inti/images/upload/';
                     $this->load->library('upload', $config);
                     if ($this->upload->do_upload('image')) {
                         $uploadedImage = $this->upload->data();
                         $this->resizeImage($uploadedImage['file_name']); 
                         $pict = $location.$uploadedImage['file_name'];
                     }
-                    if ($this->upload->do_upload('image2')) {
-                        $uploadedImage2 = $this->upload->data();
-                        $this->resizeImage($uploadedImage['file_name']); 
-                        $pict2 = $location.$uploadedImage2['file_name'];
-                    }
-                    if ($this->upload->do_upload('image3')) {
-                        $uploadedImage3 = $this->upload->data();
-                        $this->resizeImage($uploadedImage['file_name']); 
-                        $pict3 = $location.$uploadedImage3['file_name'];
-                    }
-                    if ($this->upload->do_upload('image4')) {
-                        $uploadedImage4 = $this->upload->data();
-                        $this->resizeImage($uploadedImage['file_name']); 
-                        $pict4 = $location.$uploadedImage4['file_name'];
-                    }
-                    if ($this->upload->do_upload('image5')) {
-                        $uploadedImage5 = $this->upload->data();
-                        $this->resizeImage($uploadedImage['file_name']); 
-                        $pict5 = $location.$uploadedImage5['file_name'];
-                    }
                     $this->load->helper(array('form', 'url'));
 
-                    if($this->input->post('foto') == NULL || $this->input->post('foto2') == NULL || $this->input->post('foto3') == NULL || $this->input->post('foto4') == NULL || $this->input->post('foto5') == NULL){
+                    if($this->input->post('foto') == NULL){
                         $data = Array (
                             'judul_blog' => $this->input->post('judul'),
-                            'judul_2_blog' => $this->input->post('judul2'),
-                            'judul_3_blog' => $this->input->post('judul3'),
                             'tanggal_blog' => $this->input->post('tanggal'),
-                            'story_blog' => $this->input->post('isi'),
-                            'story2_blog' => $this->input->post('isi2'),
+                            'deskripsi_blog' => $this->input->post('isi'),
                             'kategori_blog' => $this->input->post('kategori'),
-                            'tag_blog' => $this->input->post('tag'),
+                            'nama_admin_blog' => $this->input->post('nama_admin'),
                             'quotes_blog' => $this->input->post('quotes'),
-                            'img_1_blog' => $pict,
-                            'img_2_blog' => $pict2,
-                            'img_3_blog' => $pict3,
-                            'img_4_blog' => $pict4,
-                            'img_5_blog' => $pict5,
-                            'id_adm' => $this->input->post('id_adm')                            
+                            'img_blog' => $pict,
+                            'quotes_author_blog' => $this->input->post('quotes_author')                       
                         );
                     }
                     else{
                         $data = Array (
                             'judul_blog' => $this->input->post('judul'),
-                            'judul_2_blog' => $this->input->post('judul2'),
-                            'judul_3_blog' => $this->input->post('judul3'),
                             'tanggal_blog' => $this->input->post('tanggal'),
-                            'story_blog' => $this->input->post('isi'),
-                            'story2_blog' => $this->input->post('isi2'),
+                            'deskripsi_blog' => $this->input->post('isi'),
                             'kategori_blog' => $this->input->post('kategori'),
-                            'tag_blog' => $this->input->post('tag'),
+                            'nama_admin_blog' => $this->input->post('nama_admin'),
                             'quotes_blog' => $this->input->post('quotes'),
-                            'img_1_blog' => $this->input->post('foto'),
-                            'img_2_blog' => $this->input->post('foto2'),
-                            'img_3_blog' => $this->input->post('foto3'),
-                            'img_4_blog' => $this->input->post('foto4'),
-                            'img_5_blog' => $this->input->post('foto5'),
-                            'id_adm' => $this->input->post('id_adm')
+                            'img_blog' => $this->input->post('foto'),
+                            'quotes_author_blog' => $this->input->post('quotes_author')
                         );
                     }                    
 
@@ -136,8 +102,8 @@ class Blog_admin extends CI_Controller
     }
 
     public function resizeImage($filename){
-      $source_path = $_SERVER['DOCUMENT_ROOT'] . './inti/img/upload/' . $filename;
-      $target_path = $_SERVER['DOCUMENT_ROOT'] . './inti/img/upload/';
+      $source_path = $_SERVER['DOCUMENT_ROOT'] . './inti/images/upload/' . $filename;
+      $target_path = $_SERVER['DOCUMENT_ROOT'] . './inti/images/upload/';
         $config_manip = array(
             'image_library' => 'gd2',
             'source_image' => $source_path,
@@ -193,20 +159,13 @@ class Blog_admin extends CI_Controller
                     $data = Array (
                         'id_blog' => $id,
                         'judul_blog' => $this->input->post('judul'),
-                        'judul_2_blog' => $this->input->post('judul2'),
-                        'judul_3_blog' => $this->input->post('judul3'),
                         'tanggal_blog' => $this->input->post('tanggal'),
-                        'story_blog' => $this->input->post('isi'),
-                        'story2_blog' => $this->input->post('isi2'),
+                        'deskripsi_blog' => $this->input->post('isi'),
                         'kategori_blog' => $this->input->post('kategori'),
-                        'tag_blog' => $this->input->post('tag'),
+                        'nama_admin_blog' => $this->input->post('nama_admin'),
                         'quotes_blog' => $this->input->post('quotes'),
-                        'img_1_blog' => $this->input->post('foto'),
-                        'img_2_blog' => $this->input->post('foto2'),
-                        'img_3_blog' => $this->input->post('foto3'),
-                        'img_4_blog' => $this->input->post('foto4'),
-                        'img_5_blog' => $this->input->post('foto5'),
-                        'id_adm' => $this->input->post('id_adm')   
+                        'img_blog' => $this->input->post('foto'),
+                        'quotes_author_blog' => $this->input->post('quotes_author') 
                     );
 
                     $this->model_blog->update(html_escape($data), $id, false);

@@ -40,67 +40,35 @@
                     <p class="form-control-static"><?php echo $blog['judul_blog']; ?></p>
                 </div>
                 <div class="form-group">
-                    <label>Judul 2</label>
-                    <p class="form-control-static"><?php echo $blog['judul_2_blog']; ?></p>
-                </div>
-                <div class="form-group">
-                    <label>Judul 3</label>
-                    <p class="form-control-static"><?php echo $blog['judul_3_blog']; ?></p>
-                </div>
-                <div class="form-group">
-                    <label>Story</label>
-                    <p class="form-control-static"><?php echo $blog['story_blog']; ?></p>
-                </div>
-                <div class="form-group">
-                    <label>Story 2</label>
-                    <p class="form-control-static"><?php echo $blog['story2_blog']; ?></p>
+                    <label>Deskripsi</label>
+                    <p class="form-control-static"><?php echo $blog['deskripsi_blog']; ?></p>
                 </div>
                 <div class="form-group">
                     <label>Tanggal</label>
                     <p class="form-control-static"><?php echo $blog['tanggal_blog']; ?></p>
                 </div>
                 <div class="form-group">
-                    <label>Kategori</label>
-                    <p class="form-control-static"><?php echo $blog['kategori_blog']; ?></p>
+                    <label>Nama Admin</label>
+                    <p class="form-control-static"><?php echo $blog['nama_admin_blog']; ?></p>
+                </div>
+                <div class="form-group">
+                    <label>Quotes</label>
+                    <p class="form-control-static"><?php echo $blog['quotes_blog']; ?></p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label>Admin</label>
-                  <p class="form-control-static"><?php echo $blog['id_adm']; ?></p>
+                  <label>Quotes Author</label>
+                  <p class="form-control-static"><?php echo $blog['quotes_author_blog']; ?></p>
                 </div>
                 <div class="form-group">
-                  <label>Tag</label>
-                  <p class="form-control-static"><?php echo $blog['tag_blog']; ?></p>
+                  <label>Kategori</label>
+                  <p class="form-control-static"><?php echo $blog['kategori_blog']; ?></p>
                 </div>
                 <div class="form-group p-t-4">
-                  <label>Quotes</label>
-                  <p class="form-control-static"><?php echo $blog['quotes_blog']; ?></p>
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto 1</label>
-                  <p class="form-control-static"><?php echo $blog['img_1_blog']; ?></p>
-                  <img src="<?php echo $blog['img_1_blog']; ?>" style="width: 300px;">
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto 2</label>
-                  <p class="form-control-static"><?php echo $blog['img_2_blog']; ?></p>
-                  <img src="<?php echo $blog['img_2_blog']; ?>" style="width: 300px;">
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto 3</label>
-                  <p class="form-control-static"><?php echo $blog['img_3_blog']; ?></p>
-                  <img src="<?php echo $blog['img_3_blog']; ?>" style="width: 300px;">
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto 4</label>
-                  <p class="form-control-static"><?php echo $blog['img_4_blog']; ?></p>
-                  <img src="<?php echo $blog['img_4_blog']; ?>" style="width: 300px;">
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto 5</label>
-                  <p class="form-control-static"><?php echo $blog['img_5_blog']; ?></p>
-                  <img src="<?php echo $blog['img_5_blog']; ?>" style="width: 300px;">
+                  <label>Foto</label>
+                  <p class="form-control-static"><?php echo $blog['img_blog']; ?></p>
+                  <img src="<?php echo $blog['img_blog']; ?>" style="width: 300px;">
                 </div>
               </div>
               <div class="col-lg-6">

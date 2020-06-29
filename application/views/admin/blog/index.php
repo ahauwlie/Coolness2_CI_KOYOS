@@ -48,12 +48,13 @@
             <tr>
               <th>Id</th>
               <th>Judul</th>
+              <th>Deskripsi</th>
               <th>Tanggal</th>
-              <th>Story</th>
-              <th>Kategori</th>
+              <th>Nama Admin</th>
               <th>Quotes</th>
-              <th>Tag</th>
-              <th>Admin</th>
+              <th>Quotes Author</th>
+              <th>Kategori</th>
+              <th>Foto</th>
               <th>Aksi</th>
             </tr>
             </thead>
@@ -63,12 +64,13 @@
                   echo "<tr>";
                   echo "<td>".$row['id_blog']."</td>";
                   echo "<td>".$row['judul_blog']."</td>";
+                  echo "<td>".$row['deskripsi_blog']."</td>";
                   echo "<td>".$row['tanggal_blog']."</td>";
-                  echo "<td>".$row['story_blog']."</td>";
-                  echo "<td>".$row['kategori_blog']."</td>";
+                  echo "<td>".$row['nama_admin_blog']."</td>";
                   echo "<td>".$row['quotes_blog']."</td>";
-                  echo "<td>".$row['tag_blog']."</td>";
-                  echo "<td>".$row['id_adm']."</td>";
+                  echo "<td>".$row['quotes_author_blog']."</td>";
+                  echo "<td>".$row['kategori_blog']."</td>";
+                  echo "<td>".$row['img_blog']."</td>";
                   echo "<td class='text-center'>";
                   echo "      <a href='".site_url('blog_admin/edit/').$row['id_blog']."'><i class='fa fa-pencil'></i></a> ";
                   echo "      <a href='".site_url('blog_admin/detail/').$row['id_blog']."'><i class='fa fa-eye'></i></a> ";
@@ -82,12 +84,13 @@
             <tr>
               <th>Id</th>
               <th>Judul</th>
+              <th>Deskripsi</th>
               <th>Tanggal</th>
-              <th>Story</th>
-              <th>Kategori</th>
+              <th>Nama Admin</th>
               <th>Quotes</th>
-              <th>Tag</th>
-              <th>Admin</th>
+              <th>Quotes Author</th>
+              <th>Kategori</th>
+              <th>Foto</th>
               <th>Aksi</th>
             </tr>
             </tfoot>

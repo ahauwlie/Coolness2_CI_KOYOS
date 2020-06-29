@@ -91,13 +91,14 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-table"></i>
-          <span>Project</span>
+          <span>Blog</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo site_url('Project_admin'); ?>"><i class="fa fa-circle-o"></i> Daftar Project</a></li>
+          <li><a href="<?php echo site_url('Blog_admin'); ?>"><i class="fa fa-circle-o"></i> Daftar Blog</a></li>
+          <li><a href="<?php echo site_url('Blog_import_admin'); ?>"><i class="fa fa-circle-o"></i> Unggah Banyak Blog</a></li>
         </ul>
       </li>
       <li class="treeview">

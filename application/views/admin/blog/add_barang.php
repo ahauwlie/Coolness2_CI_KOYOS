@@ -36,43 +36,8 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Kategori</label>
-                    <input name="kategori" id="kategori" type="text" maxlength="100" class="form-control" required>
-                </div>
-                <div class="form-group">
                     <label>Judul</label>
                     <input name="judul" id="judul" type="text" maxlength="100" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label>Judul 2</label>
-                    <input name="judul2" id="judul2" type="text" maxlength="100" class="form-control" placeholder="tidak wajib isi">
-                </div>
-                <div class="form-group">
-                    <label>Judul 3</label>
-                    <input name="judul3" id="judul3" type="text" maxlength="100" class="form-control" placeholder="tidak wajib isi">
-                </div>
-                <div class="form-group">
-                    <label>Tanggal</label>
-                    <input name="tanggal" id="tanggal" type="date" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label>Quotes</label>
-                    <input name="quotes" id="quotes" placeholder="boleh kosong" type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Tag</label>
-                    <input name="tag" id="tag" type="text" class="form-control" required>
-                </div>
-                <?php  
-                  $session = $this->session->userdata('login');
-                  $id_adm = $session['id_adm'];
-                ?>
-                <div class="form-group">
-                    <label>Admin Id</label>
-                    <input name="id_adm" id="id_adm" value="<?php echo $id_adm; ?>" type="text" class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <input name="NULL" id="NULL" type="hidden" class="form-control">
                 </div>
                 <div class="form-group p-t-4">
                   <label>Deskripsi</label>
@@ -80,13 +45,31 @@
                     <textarea class="textarea" placeholder="Place some text here" name="isi" id="isi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
                   </div>
                 </div>
+                <div class="form-group">
+                    <label>Tanggal</label>
+                    <input name="tanggal" id="tanggal" type="date" class="form-control" required>
+                </div>
+                <?php  
+                  $session = $this->session->userdata('login');
+                  $nama_adm = $session['nama_adm'];
+                ?>
+                <div class="form-group">
+                    <label>Nama Admin</label>
+                    <input name="nama_admin" id="nama_admin" type="text" value="<?php echo $nama_adm; ?>" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Quotes</label>
+                    <input name="quotes" id="quotes" type="text" maxlength="255" class="form-control">
+                </div>
               </div>
               <div class="col-lg-6">
-                <div class="form-group p-t-4">
-                  <label>Deskripsi 2</label>
-                  <div class="box-body pad">
-                    <textarea class="textarea" placeholder="Tidak wajib isi" name="isi2" id="isi2" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                  </div>
+                <div class="form-group">
+                    <label>Quotes Author</label>
+                    <input name="quotes_author" id="quotes_author" type="text" maxlength="50" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <input name="kategori" id="kategori" type="text" maxlength="50" class="form-control">
                 </div>
                 <div class="form-group p-t-4">
                     <label>Foto Link</label>
@@ -95,34 +78,6 @@
                     <label>Upload Foto</label>
                     <input name="image" type="file" class="form-control">
                     *wajib isi salah 1'nya baik <span><i>Foto Link</i></span> maupun <span><i>Upload Foto</i></span>*
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 2</label>
-                    <input name="foto2" id="foto2" type="text" maxlength="255" class="form-control">
-                    atau<br>
-                    <label>Upload Foto 2</label>
-                    <input name="image2" type="file" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 3</label>
-                    <input name="foto3" id="foto3" type="text" maxlength="255" class="form-control">
-                    atau<br>
-                    <label>Upload Foto 3</label>
-                    <input name="image3" type="file" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 4</label>
-                    <input name="foto4" id="foto4" type="text" maxlength="255" class="form-control">
-                    atau<br>
-                    <label>Upload Foto 4</label>
-                    <input name="image4" type="file" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 5</label>
-                    <input name="foto5" id="foto5" type="text" maxlength="255" class="form-control">
-                    atau<br>
-                    <label>Upload Foto 5</label>
-                    <input name="image5" type="file" class="form-control">
                 </div>
               </div>
               <div class="col-lg-6">
