@@ -60,7 +60,7 @@
                     echo "<td>".$data->id_blog."</td>";
                     echo "<td>".$data->judul_blog."</td>";
                     echo "<td>".$data->tanggal_blog."</td>";
-                    echo "<td>".$data->story_blog."</td>";
+                    echo "<td>".$data->deskripsi_blog."</td>";
                     echo "</tr>";
                   }
                 }else{

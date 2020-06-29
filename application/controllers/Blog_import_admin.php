@@ -77,20 +77,13 @@ class Blog_import_admin extends CI_Controller {
       if($numrow > 1){
         array_push($data, array(
           'judul_blog'=>$row['A'], 
-          'judul_2_blog'=>$row['B'], 
-          'judul_3_blog'=>$row['C'], 
-          'tanggal_blog'=>$row['D'],
-          'kategori_blog'=>$row['E'],
-          'id_adm'=>$row['F'],
-          'tag_blog'=>$row['G'],
-          'quotes_blog'=>$row['H'],
-          'story_blog'=>$row['I'],
-          'story2_blog'=>$row['J'],
-          'img_1_blog'=>$row['K'],
-          'img_2_blog'=>$row['L'],
-          'img_3_blog'=>$row['M'],
-          'img_4_blog'=>$row['N'],
-          'img_5_blog'=>$row['O']
+          'tanggal_blog'=>$row['B'], 
+          'deskripsi_blog'=>$row['C'], 
+          'nama_admin_blog'=>$row['D'],
+          'quotes_blog'=>$row['E'],
+          'quotes_author_blog'=>$row['F'],
+          'img_blog'=>$row['G'],
+          'kategori_blog'=>$row['H']
         ));
       }
       
