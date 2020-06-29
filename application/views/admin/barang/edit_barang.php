@@ -19,11 +19,11 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Edit Blog</h1>
+      <h1>Edit Barang</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Tables</a></li>
-        <li class="active">Edit Blog</li>
+        <li class="active">Edit Barang</li>
       </ol>
     </section>
 
@@ -36,78 +36,79 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Kategori</label>
-                    <input name="kategori" id="kategori" type="text" maxlength="100" class="form-control" value="<?php echo $blog['kategori_blog']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Judul</label>
-                    <input name="judul" id="judul" type="text" maxlength="100" class="form-control" value="<?php echo $blog['judul_blog']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Judul 2</label>
-                    <input name="judul2" id="judul2" type="text" maxlength="100" class="form-control" value="<?php echo $blog['judul_2_blog']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Judul 3</label>
-                    <input name="judul3" id="judul3" type="text" maxlength="100" class="form-control" value="<?php echo $blog['judul_3_blog']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Tanggal</label>
-                    <input name="tanggal" id="tanggal" type="date" class="form-control" value="<?php echo $blog['tanggal_blog']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Quotes</label>
-                    <input name="quotes" id="quotes" placeholder="boleh kosong" type="text" value="<?php echo $blog['quotes_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Tag</label>
-                    <input name="tag" id="tag" placeholder="boleh kosong" type="text" value="<?php echo $blog['tag_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Admin Id</label>
-                    <input name="id_adm" id="id_adm" value="<?php echo $blog['id_adm']; ?>" type="text" class="form-control" readonly>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group p-t-4">
-                    <label>Foto Link</label>
-                    <input name="foto" id="foto" type="text" maxlength="255" value="<?php echo $blog['img_1_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 2</label>
-                    <input name="foto2" id="foto2" type="text" maxlength="255" value="<?php echo $blog['img_2_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 3</label>
-                    <input name="foto3" id="foto3" type="text" maxlength="255" value="<?php echo $blog['img_3_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 4</label>
-                    <input name="foto4" id="foto4" type="text" maxlength="255" value="<?php echo $blog['img_4_blog']; ?>" class="form-control">
-                </div>
-                <div class="form-group p-t-4">
-                    <label>Foto Link 5</label>
-                    <input name="foto5" id="foto5" type="text" maxlength="255" value="<?php echo $blog['img_5_blog']; ?>" class="form-control">
+                    <label>Nama Barang</label>
+                    <input name="nama" id="nama" type="text" maxlength="100" class="form-control" value="<?php echo $barang['nama_bar']; ?>" required>
                 </div>
                 <div class="form-group p-t-4">
                   <label>Deskripsi</label>
                   <div class="box-body pad">
-                    <input name="isi" id="isi" value="<?php echo $blog['story_blog']; ?>" class="form-control" readonly>
-                    <textarea class="textarea" value="<?php echo $blog['story_blog']; ?>" name="isi" id="isi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    <input name="deskripsi" id="deskripsi" value="<?php echo $barang['deskripsi_bar']; ?>" class="form-control" readonly>
+                    <textarea class="textarea" value="<?php echo $barang['deskripsi_bar']; ?>" name="deskripsi" id="deskripsi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
                 </div>
+                <div class="form-group">
+                    <label>Harga</label>
+                    <input name="harga" id="harga" type="text" maxlength="100" class="form-control" value="<?php echo $barang['harga_bar']; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label>Size Barang</label>
+                    <input name="size" id="size" type="text" class="form-control" value="<?php echo $barang['size_bar']; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <input name="kategori" id="kategori" placeholder="boleh kosong" type="text" value="<?php echo $barang['kategori_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Tag</label>
+                    <input name="tag" id="tag" placeholder="boleh kosong" type="text" value="<?php echo $barang['tag_bar']; ?>" class="form-control">
+                </div>
                 <div class="form-group p-t-4">
-                  <label>Deskripsi 2</label>
-                  <div class="box-body pad">
-                    <input name="isi2" id="isi2" value="<?php echo $blog['story2_blog']; ?>" class="form-control" readonly>
-                    <textarea class="textarea" value="<?php echo $blog['story2_blog']; ?>" name="isi2" id="isi2" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                  </div>
+                    <label>Foto Link</label>
+                    <input name="foto" id="foto" type="text" maxlength="255" value="<?php echo $barang['img_1_bar']; ?>" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group p-t-4">
+                    <label>Foto Link 2</label>
+                    <input name="foto2" id="foto2" type="text" maxlength="255" value="<?php echo $barang['img_2_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 3</label>
+                    <input name="foto3" id="foto3" type="text" maxlength="255" value="<?php echo $barang['img_3_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 4</label>
+                    <input name="foto4" id="foto4" type="text" maxlength="255" value="<?php echo $barang['img_4_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 5</label>
+                    <input name="foto5" id="foto5" type="text" maxlength="255" value="<?php echo $barang['img_5_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 6</label>
+                    <input name="foto6" id="foto6" type="text" maxlength="255" value="<?php echo $barang['img_6_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 7</label>
+                    <input name="foto7" id="foto7" type="text" maxlength="255" value="<?php echo $barang['img_7_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 8</label>
+                    <input name="foto8" id="foto8" type="text" maxlength="255" value="<?php echo $barang['img_8_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 9</label>
+                    <input name="foto9" id="foto9" type="text" maxlength="255" value="<?php echo $barang['img_9_bar']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 10</label>
+                    <input name="foto10" id="foto10" type="text" maxlength="255" value="<?php echo $barang['img_10_bar']; ?>" class="form-control">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                     <button class="btn btn-info">Edit</button>
-                    <a href="<?php echo site_url('Blog_admin/index'); ?>" class="btn btn-danger">Batal</a>
+                    <a href="<?php echo site_url('Barang_admin/index'); ?>" class="btn btn-danger">Batal</a>
                 </div>
               </div>
             </div>

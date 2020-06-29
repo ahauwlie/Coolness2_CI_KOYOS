@@ -61,6 +61,7 @@
             <?php
               foreach ($barang as $row) {
                   echo "<tr>";
+                  echo "<td>".$row['id_bar']."</td>";
                   echo "<td>".$row['nama_bar']."</td>";
                   echo "<td>".$row['deskripsi_bar']."</td>";
                   echo "<td>".$row['harga_bar']."</td>";

@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label>Kategori</label>
-                    <input name="kategori" id="kategori" placeholder="boleh kosong" type="text" class="form-control" required>
+                    <input name="kategori" id="kategori" type="text" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Tag</label>

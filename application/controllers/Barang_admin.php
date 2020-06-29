@@ -158,7 +158,7 @@ class Barang_admin extends CI_Controller
                     $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                     $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
 
-                    $this->load->view('admin/barang/add_bar', $data);
+                    $this->load->view('admin/barang/add_barang', $data);
                 }
             }
         }
@@ -248,7 +248,7 @@ class Barang_admin extends CI_Controller
                     $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                     $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
                     $data['barang'] = $this->model_barang->getSpecified($id);
-                    $this->load->view('admin/barang/edit_bar', $data);
+                    $this->load->view('admin/barang/edit_barang', $data);
                 }
             }
         }
@@ -271,7 +271,7 @@ class Barang_admin extends CI_Controller
                 $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
 
                 $data['barang'] = $this->model_barang->getSpecified($id);
-                $this->load->view('admin/barang/detail_bar', $data);
+                $this->load->view('admin/barang/detail_barang', $data);
             }
         }
     }

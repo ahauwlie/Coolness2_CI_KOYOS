@@ -103,14 +103,14 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-table"></i>
-          <span>Blog</span>
+          <span>Barang</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo site_url('Barang_admin'); ?>"><i class="fa fa-circle-o"></i> Daftar Blog</a></li>
-          <li><a href="<?php echo site_url('Barang_import_admin'); ?>"><i class="fa fa-circle-o"></i> Unggah Banyak Blog</a></li>
+          <li><a href="<?php echo site_url('Barang_admin'); ?>"><i class="fa fa-circle-o"></i> Daftar Barang</a></li>
+          <li><a href="<?php echo site_url('Barang_import_admin'); ?>"><i class="fa fa-circle-o"></i> Unggah Banyak Barang</a></li>
         </ul>
       </li>
       <li><a href="<?php echo site_url('User_manage_admin'); ?>"><i class="fa fa-user-circle-o"></i> <span> Kelola Admin</span></a></li>
