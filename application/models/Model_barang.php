@@ -52,6 +52,13 @@ class Model_barang extends CI_Model {
 			return $query->result();
 		}
 
+		public function dis_products2()
+		{
+			$this->db->distinct();
+			$query = $this->db->query('SELECT DISTINCT tag_bar FROM barang');
+			return $query->result();
+		}
+
 		public function countRow(){
 	        $query = $this->db->query("SELECT COUNT(*) AS num_of_time FROM barang");
 	     	return $query->result();
@@ -61,6 +68,18 @@ class Model_barang extends CI_Model {
 	        $query = $this->db->query("SELECT * FROM barang ORDER BY tanggal_bar DESC LIMIT 3");
 	     	return $query->result();
     	}
+
+    	public function showme($kategori_bar)
+		{ 
+			$query = $this->db->get_where('barang', array('kategori_bar' => $kategori_bar));
+			return $query->result();
+		}
+
+		public function showme2($tag_bar)
+		{ 
+			$query = $this->db->get_where('barang', array('tag_bar' => $tag_bar));
+			return $query->result();
+		}
 
     	public function record_count() {
         	return $this->db->count_all('barang');

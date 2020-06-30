@@ -62,354 +62,37 @@
 						<div class="row c-mb-30">
 							<main class="offset-lg-1 col-lg-10">
 								<div class="row isotope-wrapper masonry-layout blog-grid">
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/01.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Repudiandae sint velit vero voluptas
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Accusamus ad adipisci alias culpa deleniti ducimus, est et ex fugiat iusto laudantium nam ullam.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">June 18, 2019</time>
+									<?php foreach ($blog as $row) : ?>
+										<div class="col-xl-4 col-md-6">
+											<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
+												<div class="item-media post-thumbnail">
+													<a href="<?php echo site_url('Blog/single/'.$row->id_blog); ?>">
+													<img src="<?=  $row->img_blog  ?>" alt="">
 													</a>
 												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/02.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Consectetur adipisicing elit
+												<div class="item-content">
+													<header class="entry-header">
+														<h5 class="entry-title">
+															<a href="<?php echo site_url('Blog/single/'.$row->id_blog); ?>" rel="bookmark" style="color: white;">
+															<?=  $row->judul_blog  ?>
+															</a>
+														</h5>
+													</header>
+													<div class="entry-meta">
+														<span class="screen-reader-text">Posted on</span>
+														<a href="<?php echo site_url('Blog/single/'.$row->id_blog); ?>" rel="bookmark" style="color: white;">
+														<time class="entry-date published updated" datetime="<?=  $row->tanggal_blog  ?>"><?=  $row->tanggal_blog  ?></time>
 														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias et voluptas.</p>
+													</div>
 												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">June 08, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/03.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														A alias et magni maxime mollitia
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Amet aut debitis deserunt dolor dolorem harum in, inventore magnam modi obcaecati qui quo quos, vel.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">June 28, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/04.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Repudiandae sint velit vero voluptas
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Asperiores aut autem deserunt distinctio eius enim et ex fuga hic laudantium mollitia neque quisquam veniam.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">June 11, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/05.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Consectetur adipisicing elit
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>A amet, architecto aut delectus expedita harum neque perspiciatis quaerat optio quos recusandae tenetur, voluptatem.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">June 12, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/06.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														A alias et magni maxime mollitia
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Adipisci asperiores assumenda, blanditiis cum cumque dolor, ea ratione repudiandae sequi tempora voluptatibus voluptatum!</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">June 15, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/07.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Repudiandae sint velit vero voluptas
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Aperiam consequuntur culpa dolorem fugit, nisi quos? Accusamus, aliquam architecto cupiditate, deserunt et fugiat harum Qui!</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">June 28, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/08.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Consectetur adipisicing elit
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Consectetur adipisicing elit. Atque error ipsa nihil placeat! A dolor fugiat ipsam laborum vitae!</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">June 2, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/09.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														A alias et magni maxime mollitia
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Aliquid commodi consequuntur deleniti eius iste nisi sapiente voluptates. Cum debitis ducimus fuga, illum iusto vitae.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">June 18, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/10.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Repudiandae sint velit vero voluptas
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Cumque et neque qui quos tenetur! Ab atque cupiditate excepturi id in iste placeat vel!</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">June 18, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/01.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														Consectetur adipisicing elit
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias et voluptas.</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">June 18, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="col-xl-4 col-md-6">
-										<article class="vertical-item text-center content-padding padding-small post type-post status-publish format-standard has-post-thumbnail">
-											<div class="item-media post-thumbnail">
-												<a href="<?php echo site_url('blog/single'); ?>">
-												<img src="<?php echo base_url('/inti/images/gallery/12.jpg'); ?>" alt="">
-												</a>
-											</div>
-											<div class="item-content">
-												<header class="entry-header">
-													<h5 class="entry-title">
-														<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-														A alias et magni maxime mollitia
-														</a>
-													</h5>
-												</header>
-												<div class="entry-content">
-													<p>Aperiam asperiores aut beatae dolorem ex excepturi, fugiat, id inventore laudantium molestias nulla quia totam!</p>
-												</div>
-												<div class="entry-meta">
-													<span class="screen-reader-text">Posted on</span>
-													<a href="<?php echo site_url('blog/single'); ?>" rel="bookmark" style="color: white;">
-													<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">June 18, 2019</time>
-													</a>
-												</div>
-											</div>
-										</article>
-									</div>
+											</article>
+										</div>
+									<?php endforeach; ?>
 								</div>
 								<nav class="navigation pagination justify-content-center" role="navigation">
 									<h2 class="screen-reader-text">Posts navigation</h2>
 									<div class="nav-links">
-										<a class="prev page-numbers" href="blog-right.html">
-										<i class="fa fa-chevron-left"></i>
-										<span class="screen-reader-text">Previous page</span>
-										</a>
-										<a class="page-numbers" href="blog-right.html">
-										<span class="meta-nav screen-reader-text">Page </span>
-										1
-										</a>
-										<span class="page-numbers current">
-										<span class="meta-nav screen-reader-text">Page </span>
-										2
-										</span>
-										<a class="page-numbers" href="blog-right.html">
-										<span class="meta-nav screen-reader-text">Page </span>
-										3
-										</a>
-										<a class="next page-numbers" href="blog-right.html">
-										<span class="screen-reader-text">Next page</span>
-										<i class="fa fa-chevron-right"></i>
-										</a>
+										<?php echo $links; ?>
 									</div>
 								</nav>
 							</main>

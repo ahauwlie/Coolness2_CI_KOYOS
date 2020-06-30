@@ -73,12 +73,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</select>
 									</form>
 									<ul class="products">
-										<?php foreach ($barang as $row) : ?>
+										<?php foreach ($comes as $row) : ?>
 											<li class="product">
 												<div class="product-inner">
-													<a href="<?php echo site_url('shop/detail/'.$row->id_bar); ?>">
+													<a href="<?php echo site_url('shop/detail'); ?>">
 														<span class="onsale"><?=  $row->tag_bar  ?></span>
-														<img src="<?=  $row->img_1_bar  ?>" alt="">
+														<img src="<?php echo base_url('/inti/images/shop/01.jpg'); ?>" alt="">
 														<h2><?=  $row->nama_bar  ?></h2>
 														<span class="price">
 														<ins>
@@ -96,11 +96,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<?php endforeach; ?>
 									</ul>
 								</div>
-								<nav class="woocommerce-pagination">
-									<ul class="page-numbers">
-										<?php echo $links; ?>
-									</ul>
-								</nav>
 							</main>
 							<aside class="col-lg-4 col-xl-3 order-lg-1">
 								<div class="widget woocommerce widget_product_categories">

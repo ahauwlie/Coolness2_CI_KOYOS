@@ -68,40 +68,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="product">
 									<div class="images" data-columns="4">
 										<figure>
-											<div data-thumb="<?php echo base_url('/inti/images/shop/11.jpg'); ?>">
-												<a href="<?php echo base_url('/inti/images/shop/11.jpg'); ?>">
-												<img src="<?php echo base_url('/inti/images/shop/11.jpg'); ?>" alt="" data-caption="" data-src="<?php echo base_url('/inti/images/shop/11.jpg'); ?>" data-large_image="<?php echo base_url('/inti/images/shop/11.jpg'); ?>" data-large_image_width="1000" data-large_image_height="1000">
+											<div data-thumb="<?php echo $lol['img_1_bar']; ?>">
+												<a href="<?php echo $lol['img_1_bar']; ?>">
+												<img src="<?php echo $lol['img_1_bar']; ?>" alt="" data-caption="" data-src="<?php echo $lol['img_1_bar']; ?>" data-large_image="<?php echo $lol['img_1_bar']; ?>" data-large_image_width="1000" data-large_image_height="1000">
 												</a>
 											</div>
-											<div data-thumb="<?php echo base_url('/inti/images/shop/12.jpg'); ?>">
-												<a href="<?php echo base_url('/inti/images/shop/12.jpg'); ?>">
-												<img src="<?php echo base_url('/inti/images/shop/12.jpg'); ?>" alt="" data-caption="" data-src="<?php echo base_url('/inti/images/shop/12.jpg'); ?>" data-large_image="<?php echo base_url('/inti/images/shop/12.jpg'); ?>" data-large_image_width="1000" data-large_image_height="1000">
+											<div data-thumb="<?php echo $lol['img_2_bar']; ?>">
+												<a href="<?php echo $lol['img_2_bar']; ?>">
+												<img src="<?php echo $lol['img_2_bar']; ?>" alt="" data-caption="" data-src="<?php echo $lol['img_2_bar']; ?>" data-large_image="<?php echo $lol['img_2_bar']; ?>" data-large_image_width="1000" data-large_image_height="1000">
 												</a>
 											</div>
-											<div data-thumb="<?php echo base_url('/inti/images/shop/06.jpg'); ?>">
-												<a href="<?php echo base_url('/inti/images/shop/06.jpg'); ?>">
-												<img src="<?php echo base_url('/inti/images/shop/06.jpg'); ?>" alt="" data-caption="" data-src="<?php echo base_url('/inti/images/shop/06.jpg'); ?>" data-large_image="<?php echo base_url('/inti/images/shop/06.jpg'); ?>" data-large_image_width="1000" data-large_image_height="1000">
+											<div data-thumb="<?php echo $lol['img_3_bar']; ?>">
+												<a href="<?php echo $lol['img_3_bar']; ?>">
+												<img src="<?php echo $lol['img_3_bar']; ?>" alt="" data-caption="" data-src="<?php echo $lol['img_3_bar']; ?>" data-large_image="<?php echo $lol['img_3_bar']; ?>" data-large_image_width="1000" data-large_image_height="1000">
 												</a>
 											</div>
-											<div data-thumb="<?php echo base_url('/inti/images/shop/10.jpg'); ?>">
-												<a href="<?php echo base_url('/inti/images/shop/10.jpg'); ?>">
-												<img src="<?php echo base_url('/inti/images/shop/10.jpg'); ?>" alt="" data-caption="" data-src="<?php echo base_url('/inti/images/shop/10.jpg'); ?>" data-large_image="<?php echo base_url('/inti/images/shop/10.jpg'); ?>" data-large_image_width="1000" data-large_image_height="1000">
+											<div data-thumb="<?php echo $lol['img_4_bar']; ?>">
+												<a href="<?php echo $lol['img_4_bar']; ?>">
+												<img src="<?php echo $lol['img_4_bar']; ?>" alt="" data-caption="" data-src="<?php echo $lol['img_4_bar']; ?>" data-large_image="<?php echo $lol['img_4_bar']; ?>" data-large_image_width="1000" data-large_image_height="1000">
 												</a>
 											</div>
 										</figure>
 									</div>
 									<div class="summary entry-summary">
-										<h1 class="product_title entry-title">Bow compound Buster 15 - 29 lbs black </h1>
-										<div class="woocommerce-product-rating">
-											<div class="star-rating">
-												<span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5 based on <span class="rating">3</span> customer ratings</span>
-											</div>
-										</div>
+										<h1 class="product_title entry-title"><?php echo $lol['nama_bar']; ?> </h1>
 										<div>
-											<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-												tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-												semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-											</p>
+											<?php echo $lol['deskripsi_bar']; ?>
 										</div>
 										<form>
 											<div class="single_variation_wrap">
@@ -115,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</form>
 										<p class="price">
 											<span>
-											<span>$</span>20.00
+											<span><?php echo "Rp ".number_format($lol['harga_bar'], 0,",","."); ?>
 											</span>
 										</p>
 									</div>
@@ -127,240 +119,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<li class="additional_information_tab active" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
 												<a href="#tab-additional_information">Additional information</a>
 											</li>
-											<li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-												<a href="#tab-reviews">Reviews (3)</a>
-											</li>
 										</ul>
 										<div class="panel wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
 											<h2>Description</h2>
-											<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-												Vestibulum
-												tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-												egestas
-												semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-											</p>
+											<?php echo $lol['deskripsi_bar']; ?>
 										</div>
 										<div class="panel wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
 											<h2>Additional information</h2>
 											<table class="shop_attributes">
 												<tbody>
 													<tr>
-														<th>Color</th>
-														<td>
-															<p>Blue</p>
-														</td>
-													</tr>
-													<tr>
 														<th>Size</th>
 														<td>
-															<p>X Small, Small, Medium, Large, X Large, XX Large, XXX Large</p>
+															<?php echo $lol['size_bar']; ?>
 														</td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
-										<div class="panel wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-											<div id="reviews">
-												<div id="comments">
-													<h2>3 reviews for <span>Ship Your Idea</span>
-													</h2>
-													<ol class="commentlist">
-														<li class="comment even thread-even depth-1" id="li-comment-34">
-															<div id="comment-34" class="comment_container">
-																<img alt="" src="https://2.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=60&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-																<div class="comment-text">
-																	<div class="star-rating">
-																		<span style="width:80%">Rated <strong
-																			class="rating">4</strong> out of 5</span>
-																	</div>
-																	<p class="meta">
-																		<strong>James
-																		Koster</strong> <span>–</span>
-																		<time datetime="2013-06-07T11:43:13+00:00">June 7, 2013
-																		</time>
-																	</p>
-																	<div class="description">
-																		<p>Nice T-shirt, I got one in black. Goes with
-																			anything!
-																		</p>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-35">
-															<div id="comment-35" class="comment_container">
-																<img alt="" src="https://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=60&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-																<div class="comment-text">
-																	<div class="star-rating">
-																		<span style="width:80%">Rated <strong
-																			class="rating">4</strong> out of 5</span>
-																	</div>
-																	<p class="meta">
-																		<strong>Cobus
-																		Bester</strong> <span>–</span>
-																		<time datetime="2013-06-07T11:55:15+00:00">June 7, 2013
-																		</time>
-																	</p>
-																	<div class="description">
-																		<p>Very comfortable shirt, and I love the graphic!</p>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li class="comment even thread-even depth-1" id="li-comment-36">
-															<div id="comment-36" class="comment_container">
-																<img alt="" src="https://1.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=60&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-																<div class="comment-text">
-																	<div class="star-rating">
-																		<span style="width:100%">Rated <strong
-																			class="rating">5</strong> out of 5</span>
-																	</div>
-																	<p class="meta">
-																		<strong>Stuart</strong>
-																		<span>–</span>
-																		<time datetime="2013-06-07T13:02:14+00:00">June 7, 2013
-																		</time>
-																	</p>
-																	<div class="description">
-																		<p>Great T-shirt quality, Great Design and Great
-																			Service.
-																		</p>
-																	</div>
-																</div>
-															</div>
-														</li>
-													</ol>
-												</div>
-												<div id="review_form_wrapper">
-													<div id="review_form">
-														<div id="respond" class="comment-respond">
-															<span id="reply-title" class="comment-reply-title">Add a review <small>
-															<a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">Cancel reply</a>
-															</small>
-															</span>
-															<form action="http://webdesign-finder.com/" method="post" id="commentform" class="comment-form" novalidate="">
-																<p class="comment-notes">
-																	<span id="email-notes">Your email address will not be published.</span>
-																	Required fields are marked <span class="required">*</span>
-																</p>
-																<div class="comment-form-rating">
-																	<label>Your rating</label>
-																	<p class="stars">
-																		<span>
-																		<a class="star-1" href="#">1</a>
-																		<a class="star-2" href="#">2</a>
-																		<a class="star-3" href="#">3</a>
-																		<a class="star-4" href="#">4</a>
-																		<a class="star-5" href="#">5</a>
-																		</span>
-																	</p>
-																</div>
-																<p class="comment-form-comment">
-																	<label for="comment">Your review <span class="required">*</span>
-																	</label>
-																	<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required="">
-																	</textarea>
-																</p>
-																<p class="comment-form-author">
-																	<label for="author">Name <span class="required">*</span>
-																	</label>
-																	<input id="author" name="author" type="text" value="" size="30" aria-required="true" required="">
-																</p>
-																<p class="comment-form-email">
-																	<label for="woo-email">Email <span class="required">*</span>
-																	</label> <input id="woo-email" name="email" type="email" value="" size="30" aria-required="true" required="">
-																</p>
-																<p class="form-submit">
-																	<input name="submit" type="submit" id="submit" class="submit" value="Submit">
-																</p>
-															</form>
-														</div>
-													</div>
-												</div>
-												<div class="clear">
-												</div>
-											</div>
-										</div>
 									</div>
-									<section class="up-sells upsells products">
-										<h2><span class="color-main">You may</span> also like</h2>
-										<ul class="products">
-											<li class="product">
-												<div class="product-inner">
-													<a href="shop-product-left.html">
-														<span class="onsale">Sale!</span>
-														<img src="<?php echo base_url('/inti/images/shop/07.jpg'); ?>" alt="">
-														<h2>Ship Your Idea</h2>
-														<div class="star-rating">
-															<span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-														</div>
-														<span class="price">
-														<span>
-														<span>$</span>30.00
-														</span>
-														–
-														<span>
-														<span>$</span>35.00
-														</span>
-														</span>
-													</a>
-													<a rel="nofollow" href="shop-product-left.html" data-quantity="1" data-product_id="40" data-product_sku="" class="button product_type_variable add_to_cart_button">Select
-													options</a>
-												</div>
-											</li>
-											<li class="product">
-												<div class="product-inner">
-													<a href="shop-product-left.html">
-														<img src="<?php echo base_url('/inti/images/shop/06.jpg'); ?>" alt="">
-														<h2>Woo Logo</h2>
-														<div class="star-rating">
-															<span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-														</div>
-														<span class="price">
-														<span>
-														<span>$</span>35.00
-														</span>
-														</span>
-													</a>
-													<a rel="nofollow" href="#" data-quantity="1" data-product_id="60" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-												</div>
-											</li>
-											<li class="product">
-												<div class="product-inner">
-													<a href="shop-product-left.html">
-														<img src="<?php echo base_url('/inti/images/shop/08.jpg'); ?>" alt="">
-														<h2>Woo Logo</h2>
-														<div class="star-rating">
-															<span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-														</div>
-														<span class="price">
-														<span>
-														<span>$</span>20.00
-														</span>
-														</span>
-													</a>
-													<a rel="nofollow" href="#" data-quantity="1" data-product_id="60" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-												</div>
-											</li>
-											<li class="product">
-												<div class="product-inner">
-													<a href="shop-product-left.html">
-														<img src="<?php echo base_url('/inti/images/shop/28.jpg'); ?>" alt="">
-														<h2>Woo Logo</h2>
-														<div class="star-rating">
-															<span style="width:90%">Rated <strong class="rating">4.50</strong> out of 5</span>
-														</div>
-														<span class="price">
-														<span>
-														<span>$</span>4.00
-														</span>
-														</span>
-													</a>
-													<a rel="nofollow" href="#" data-quantity="1" data-product_id="60" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-												</div>
-											</li>
-										</ul>
-									</section>
 								</div>
 							</main>
 							<aside class="col-lg-4 col-xl-3 order-lg-1">
@@ -368,54 +145,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<h3 class="widget-title">Categories</h3>
 									<ul class="product-categories">
 										<li class="cat-item cat-parent">
-											<a href="shop-right.html">Clothing</a>
-											<span class="count">(12)</span>
-											<ul class="children">
-												<li class="cat-item">
-													<a href="shop-right.html">Hoodies</a>
-													<span class="count">(46)</span>
-												</li>
-												<li class="cat-item">
-													<a href="shop-right.html">T-shirts</a>
-													<span class="count">(165)</span>
-												</li>
-											</ul>
-										</li>
-										<li class="cat-item cat-parent">
-											<a href="shop-right.html">Music</a>
-											<span class="count">(16)</span>
-											<ul class="children">
-												<li class="cat-item">
-													<a href="shop-right.html">Albums</a>
-													<span class="count">(24)</span>
-												</li>
-												<li class="cat-item">
-													<a href="shop-right.html">Singles</a>
-													<span class="count">(2)</span>
-												</li>
-											</ul>
-										</li>
-										<li class="cat-item">
-											<a href="shop-right.html">Posters</a>
-											<span class="count">(45)</span>
+											<?php foreach ($kategori as $row) : ?>
+												<a><?=  anchor('Shop/showme/'.$row->kategori_bar,$row->kategori_bar,['class'=>'btn btn-default']) ?></a>
+											<?php endforeach; ?>
 										</li>
 									</ul>
 								</div>
 								<div class="widget woocommerce widget_product_tag_cloud">
 									<h3 class="widget-title">Price Tags</h3>
 									<div class="tagcloud">
-										<a href="shop-right.html" class="tag-cloud-link" aria-label="album (1 product)">
-										Album
-										</a>
-										<a href="shop-right.html" class="tag-cloud-link" aria-label="premium (1 product)">
-										Premium
-										</a>
-										<a href="shop-right.html" class="tag-cloud-link" aria-label="product (1 product)">
-										Product
-										</a>
-										<a href="shop-right.html" class="tag-cloud-link" aria-label="single (1 product)">
-										Single
-										</a>
+										<?php foreach ($tag as $row) : ?>
+											<a><?=  anchor('Shop/tag/'.$row->tag_bar,$row->tag_bar,['class'=>'btn btn-default']) ?></a>
+										<?php endforeach; ?>
 									</div>
 								</div>
 							</aside>
